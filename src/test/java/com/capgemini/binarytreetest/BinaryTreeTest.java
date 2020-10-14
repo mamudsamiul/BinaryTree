@@ -5,7 +5,20 @@ package com.capgemini.binarytreetest;
 
 import org.junit.Test;
 
+import com.capgemini.binarytree.MyBinaryTree;
+
+import junit.framework.Assert;
+
 import static org.junit.Assert.*;
 
 public class BinaryTreeTest {
+	@Test
+	public void given3NumbersWhenAddedToBinaryTreeShouldReturnSizeThree() {
+		MyBinaryTree<Integer> myBinaryTree = new MyBinaryTree<>();
+		myBinaryTree.add(56);
+		myBinaryTree.add(30);
+		myBinaryTree.add(78);
+		int size = myBinaryTree.getSize();
+		Assert.assertEquals(3, size);
+	}
 }
